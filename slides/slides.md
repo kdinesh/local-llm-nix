@@ -494,6 +494,12 @@ Quality (of output) vs usability (tokens/sec)
 * Also, distil.pub - \url{https://distill.pub/} for excellent explanations (by
   Chris Olah) !
 
+# Acknowledgments
+
+* Nix - Thanks Piyush (CSE) for the introduction
+* About MoE models - Praneeth, Shivasai (UG students, DS dept.)
+* More to be added ...
+
 # Explanation of the flake file
 
 - Useful part is the flags 
