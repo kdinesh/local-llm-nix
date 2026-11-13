@@ -117,7 +117,7 @@ nix run nixpkgs#fastfetch
 
 # Installation of Inference (`llama.cpp`)
 
-- Go to the repo: \url{https://github.com/kdinesh/local-llm-demo/} \pause
+- Go to the repo: \url{https://github.com/kdinesh/local-llm-nix/} \pause
 - Download the repo as an archive (show how) \pause
 - Extract the zip to a folder. Do
     - open `linux-intel`  $\gets$ Linux (no GPU),
