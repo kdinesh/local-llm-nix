@@ -1,21 +1,20 @@
 # local-llm-nix
 
-Install llama.cpp and run local LLMs using nix flake.
-
-* Purpose of this demo is to allow users to install and try out LLMs locally.
+Install llama.cpp and run local LLMs using nix flake. Purpose of this demo is to allow users to install and try out LLMs locally.
 
 # How to use
 
-* Install nix. Check `slides/slides.md` to see how to do this.
+* Install [nix](https://nixos.org/download/), Multi-user installation recommended. You can also check `slides/slides.md` to see how to do this.
 * Clone this repo locally using `git clone https://github.com/kdinesh/local-llm-nix`
 * Based on your machine `cd` to one of the folders in the repo.
+* To know if your machine has a GPU, do `nix run nixpkgs#fastfetch`.
 
 |Folder | Machine |
 |----- | ---- |
-|`linux-intel` | Linux (no GPU)|
+|`linux-intel` | Linux (no GPU, intel GPU)|
 |`linux-amd` | Linux (AMD GPU)|
 |`linux-cuda` | Linux (Nvidia GPU, any CPU)|
-|`mac` | Mac (M1,M2,M3,M4,M5)|
+|`mac` | Mac (M1, M2, M3, M4, M5)|
 
 * Do `nix develop` in the directory for installation.
 * Test your installation by run a small quantized model (say Qwen 3). To do
