@@ -353,7 +353,7 @@ Multiuser setting, mechanism very similar to virtual memory
 
 * \# of Float ops (FLOPS): 1 Tera flop/sec (for ordinary CPU)
 
-* Tokens / second $= \frac{1}{\max\{\text{Time move data}, \text{Time compute}\}}$
+* Tokens / second $ \le \frac{1}{\max\{\text{Time move data}, \text{Time compute}\}}$
 
 * Time to move data: 57G / 50G = 1.8 seconds
 
@@ -361,7 +361,7 @@ Multiuser setting, mechanism very similar to virtual memory
 
 * Factor \textcolor{red}{2}: **Recall: 2 ops/mem access**
 
-* Number of tokens = 0.56 tokens per second
+* Number of tokens \le 0.56 tokens per second
 
 \begin{center}
 \textbf{A similar calc holds for dense models alone.} \pause
