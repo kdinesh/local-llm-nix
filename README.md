@@ -24,5 +24,5 @@ Install llama.cpp and run local LLMs using nix flake. Purpose of this demo is to
     - Save the file in `~/models` directory.
     - In the shell where you ran `nix develop`, issue the following
       `llama-server --models-dir ~/models --port 8080`
-    - Open `http://localhost:8080`, to get the chat web interface.
+    - Open `http://localhost:8080` in your web browser, to get the chat web interface.
     
