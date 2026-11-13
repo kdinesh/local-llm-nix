@@ -437,7 +437,7 @@ $ llama-server --models-dir ~/models --port 8080 \
     - To enable, pass `-fa` as an option
 
 * Turbo llama.cpp
-    - Appeared in ICLR 2026
+    - Based on Turbo Quant, Google research (ICLR 2026)
 
 [^link]: Unsloth: Qwen3 - How to Run & Fine-tune, [blog link](https://unsloth.ai/docs/models/tutorials/qwen3-how-to-run-and-fine-tune)
 
