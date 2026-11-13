@@ -16,7 +16,8 @@ Install llama.cpp and run local LLMs using nix flake. Purpose of this demo is to
 |`linux-cuda` | Linux (Nvidia GPU, any CPU)|
 |`mac` | Mac (M1, M2, M3, M4, M5)|
 
-* Do `nix develop` in the directory for installation.
+* Do `nix develop` in the directory chosen above for installation.
+* The install will take about 10-20 minutes depending on your machine and internet speed.
 * Test your installation by run a small quantized model (say Qwen 3). To do
   this,
     - Download [this](https://huggingface.co/unsloth/Qwen3-8B-GGUF/resolve/main/Qwen3-8B-Q2_K_L.gguf?download=true) file. **Warning**: 3.5 GB
