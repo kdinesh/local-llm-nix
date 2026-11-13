@@ -133,7 +133,14 @@ nix run nixpkgs#fastfetch
 
 # While the installation is going on $\ldots$
 
-- Download intranet copy of Qwen 3 model (3.5 GB)  (show)
+- Download intranet copy of Qwen 3 model (3.5 GB)  (show) \pause
+
+- Can also do 
+
+``` bash
+hf download unsloth/Qwen3-8B-GGUF \ 
+    Qwen3-8B-Q2_K_L.gguf --local-dir ~/models/
+```
 
 - Sit back and relax !! \pause
 

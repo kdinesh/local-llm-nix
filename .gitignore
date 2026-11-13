@@ -9,4 +9,4 @@ result-*
 **/.nixos-test-history
 
 # Ignore pdf
-.pdf
+*.pdf
