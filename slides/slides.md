@@ -490,11 +490,8 @@ Quality (of output) vs usability (tokens/sec)
 
 # Reference and pointers
 
-* Contests to improve [LLM
-  performance](https://www.yukon.org/mlxfast?benchmark=qwen38-27b-tf&platform=mlx)
-
-* [How to build an LLM (Sebastin
-  Raschka)](https://magazine.sebastianraschka.com/p/coding-the-kv-cache-in-llms)
+* [How to train your cannon
+  slop](https://github.com/Open-Science-Ledger/how-to-train-your-slop-cannon/blob/cf11d3bd6faed710fcae7905f872a63cfa34aa45/train_your_slop_cannon_v1.pdf) - A short guide to using LLMs in research
 
 * Deep learning substacks - \url{https://cameronrwolfe.substack.com/}
 
@@ -504,7 +501,9 @@ Quality (of output) vs usability (tokens/sec)
 # Acknowledgments
 
 * Nix - Thanks Piyush (CSE) for the introduction
+
 * About MoE models - Praneeth, Shivasai (UG students, DS dept.)
+
 * More to be added ...
 
 # Explanation of the flake file
