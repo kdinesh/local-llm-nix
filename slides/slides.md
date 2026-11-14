@@ -281,6 +281,7 @@ $$
 * $N$ = Context window
     - Typical values - 4096, 32768, 65536, 262144
     - Take $N = 262144$
+    - $\approx 400$ pages of A4 text (assume 500 words/page).
 
 **To generate the next word (1 token)**
 
@@ -491,7 +492,7 @@ Quality (of output) vs usability (tokens/sec)
 # Reference and pointers
 
 * [How to train your cannon
-  slop](https://github.com/Open-Science-Ledger/how-to-train-your-slop-cannon/blob/cf11d3bd6faed710fcae7905f872a63cfa34aa45/train_your_slop_cannon_v1.pdf) - A short guide to using LLMs in research
+  slop](https://github.com/Open-Science-Ledger/how-to-train-your-slop-cannon/blob/cf11d3bd6faed710fcae7905f872a63cfa34aa45/train_your_slop_cannon_v1.pdf) - A short guide to using LLMs in research, 2026 (D. Loader, J. Oppenheim, T. Osborne).
 
 * Deep learning substacks - \url{https://cameronrwolfe.substack.com/}
 
