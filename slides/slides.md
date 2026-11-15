@@ -103,7 +103,7 @@ experimental-features = nix-command flakes
 - Installs: 
     - `llama.cpp` - inference, (developer: **G**eorgi **G**reganov) 
     - `hf` - huggingface model downloader
-    - `pi` - programming agent
+    - `pi` - programming agent (developer: Mario Zechner)
 
 - This step: Needs 6-7 GB of HDD/SSD storage space
 
