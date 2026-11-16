@@ -135,7 +135,7 @@ nix run nixpkgs#fastfetch
 
 - Download intranet copy of Qwen 3 model (3.5 GB)  (show) \pause
 
-- Can also do 
+- Can also do (once install is done)
 
 ``` bash
 hf download unsloth/Qwen3-8B-GGUF \ 
@@ -160,7 +160,7 @@ Calculate **compute** and **memory** usage for a model under **reasonable assump
 ::: columns
 
 :::: column
-* Model **vocabulary** of $w$ words (Varies with models)
+* Model **vocabulary** of $w$ words (varies with models)
 
 * Each word =  real vector of length $d$
     - For open models $d=8192$ \pause
@@ -263,7 +263,7 @@ $$
 
 * Let $Q = I \cdot W_Q$, $K = I\cdot W_K$, $V = I \cdot W_V$ \pause
 
-* $\mathbf{Attention}_t(I) =\mathsf{softmax} \left( \frac{Q\cdot K^T}{\sqrt{d}} \cdot  V \right )$ \pause
+* $\mathbf{Attention}_t(I) = \left (\mathsf{softmax} \left( \frac{Q\cdot K^T}{\sqrt{d}} \right ) \right )V$ \pause
 
 * **Our focus**: Computing $K, V$ compute --  Multiply $N \times d$ and $d \times d$ matrices
 
@@ -361,7 +361,7 @@ Multiuser setting, mechanism very similar to virtual memory
 * Factor \textcolor{red}{2}: **Recall: 2 ops/mem access**
 
 \begin{center}
- Tokens / second $\le \frac{1}{\max\{\text{Time move data}, \text{Time compute}\}}$ \pause $\le \textbf{0.56}$
+ Tokens / second $\le \frac{1}{\max\{\text{Time move data}, \text{Time compute}\}}$ \pause $\le \textbf{0.56}$ \pause
 \end{center}
 
 
