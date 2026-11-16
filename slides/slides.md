@@ -1,7 +1,10 @@
 ---
 title: Installing and using LLMs locally
+subtitle:   (Scan QR code for slides)
 author: In-house AI workshop (Day 1) 
-institute: A01-007, Academic Building, IIT Palakkad
+institute: |
+           | A01-007, Academic Building, IIT Palakkad  \vspace{3mm}
+           | \qrcode*[height=1.15in]{https://kdinesh.tngl.sh/slides.pdf}
 urlcolor: red
 fonttheme: professionalfonts
 theme: Copenhagen
@@ -11,7 +14,10 @@ header-includes:
   - \usepackage{amsmath,amssymb,amsthm}
   - \usepackage[ruled,vlined]{algorithm2e}
   - \usepackage{blkarray}
+  - \usepackage{qrcode}
+  - \usepackage{xcolor}
 ---
+
 
 # Plan
 
@@ -460,6 +466,7 @@ $ llama-server --models-dir ~/models --port 8080 \
 ## Trade-off
 Quality (of output) vs usability (tokens/sec) 
 
+
 # Reference and pointers
 
 * [How to train your cannon
@@ -475,6 +482,18 @@ Quality (of output) vs usability (tokens/sec)
 \begin{center}
 \huge Questions ?
 \end{center}
+
+# Acknowledgments
+
+* Nix - Thanks Piyush !
+
+* `llama.cpp` github coderepo
+
+* MoE models - Praneeth, Shivasai (UG students, DS dept.)
+
+* Hacker news discussions
+
+* Articles from lesswrong.com
 
 # Open Models and Reality
 
@@ -506,17 +525,6 @@ Quality (of output) vs usability (tokens/sec)
 [^quality]: "Reliability Scaling Laws for Quantized Large Language Models", TUM, 2026
 
 
-# Acknowledgments
-
-* Nix - Thanks Piyush !
-
-* `llama.cpp` github coderepo
-
-* MoE models - Praneeth, Shivasai (UG students, DS dept.)
-
-* Hacker news
-
-* Less wrong articles
 
 
 # Explanation of the flake file
