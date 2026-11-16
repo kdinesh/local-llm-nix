@@ -457,6 +457,21 @@ $ llama-server --models-dir ~/models --port 8080 \
 ## Trade-off
 Quality (of output) vs usability (tokens/sec) 
 
+# Reference and pointers
+
+* [How to train your cannon
+  slop](https://github.com/Open-Science-Ledger/how-to-train-your-slop-cannon/blob/cf11d3bd6faed710fcae7905f872a63cfa34aa45/train_your_slop_cannon_v1.pdf) - A short guide to using LLMs in research, 2026 (D. Loader, J. Oppenheim, T. Osborne).
+
+* [Blog by Sebastin Raschka](https://magazine.sebastianraschka.com/)
+    - Build a Reasoning Model (From Scratch) 
+    - Build a Large Language Model (From Scratch) 
+
+* Also, [https://distil.pub](https://distill.pub/) for excellent explanations (by
+  Chris Olah) !
+
+\begin{center}
+\huge Questions ?
+\end{center}
 
 # Open Models and Reality
 
@@ -464,11 +479,9 @@ Quality (of output) vs usability (tokens/sec)
 
 * SAIR open model (not yet released)
 
-* FirstProofs study (third batch)[^firstproof]: 
+<!-- Science and AI Research (SAIR)  -->
 
-> One key finding was that the frontier AI models were able to solve 90% of the
-> problems, while open weight models solved none
-
+* FirstProofs study (third batch)[^firstproof] 
 
 * Checkout the FirstProofs github repo[^repo] for many research-level harness
 
@@ -489,23 +502,19 @@ Quality (of output) vs usability (tokens/sec)
 
 [^quality]: "Reliability Scaling Laws for Quantized Large Language Models", TUM, 2026
 
-# Reference and pointers
-
-* [How to train your cannon
-  slop](https://github.com/Open-Science-Ledger/how-to-train-your-slop-cannon/blob/cf11d3bd6faed710fcae7905f872a63cfa34aa45/train_your_slop_cannon_v1.pdf) - A short guide to using LLMs in research, 2026 (D. Loader, J. Oppenheim, T. Osborne).
-
-* Deep learning substacks - \url{https://cameronrwolfe.substack.com/}
-
-* Also, distil.pub - \url{https://distill.pub/} for excellent explanations (by
-  Chris Olah) !
 
 # Acknowledgments
 
-* Nix - Thanks Piyush (CSE) for the introduction
+* Nix - Thanks Piyush !
 
-* About MoE models - Praneeth, Shivasai (UG students, DS dept.)
+* `llama.cpp` github coderepo
 
-* More to be added ...
+* MoE models - Praneeth, Shivasai (UG students, DS dept.)
+
+* Hacker news
+
+* Less wrong articles
+
 
 # Explanation of the flake file
 
