@@ -281,7 +281,7 @@ $$
 * $N$ = Context window
     - Typical values - 4096, 32768, 65536, 262144
     - Take $N = 262144$
-    - $\approx 400$ pages of A4 text (assume 500 words/page).
+<!--  $\approx 667$ pages of A4 text (assume 400 words/page and each word is 4/3 token). -->
 
 **To generate the next word (1 token)**
 
@@ -354,19 +354,22 @@ Multiuser setting, mechanism very similar to virtual memory
 
 * \# of Float ops (FLOPS): 1 Tera flop/sec (for ordinary CPU)
 
-* Tokens / second $ \le \frac{1}{\max\{\text{Time move data}, \text{Time compute}\}}$
-
 * Time to move data: 57G / 50G = 1.8 seconds
 
 * Time for compute: 57G $\times \textcolor{red}{2}$ / 1T = 0.1 seconds
 
 * Factor \textcolor{red}{2}: **Recall: 2 ops/mem access**
 
-* Number of tokens \le 0.56 tokens per second
+\begin{center}
+ Tokens / second $\le \frac{1}{\max\{\text{Time move data}, \text{Time compute}\}}$ \pause $\le \textbf{0.56}$
+\end{center}
+
+
+<!-- 
+\textbf{A similar calc holds for dense models alone.} \pause
+-->
 
 \begin{center}
-\textbf{A similar calc holds for dense models alone.} \pause
-
 \fbox{\large The installation should be complete by now. Let's get back ! }
 
 \end{center}
