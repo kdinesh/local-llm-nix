@@ -345,7 +345,7 @@ Possible to do 2 operations/memory access (on average)
 * Total KV cache is $\underbrace{2}_{\text{$K$ and $V$}} \times \underbrace{Nd}_{values} \times \underbrace{L}_{\# layers}$
 
 * Memory (Qwen 3) = 206 GB + 32 GB (\textcolor{red}{Too much memory
-  !})
+  !}) \pause
 
 * **Solution**: Grouped query attention[^group]. Reduces memory req by factor of $8$
 
