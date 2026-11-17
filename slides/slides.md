@@ -444,7 +444,10 @@ $ llama-server --models-dir ~/models --port 8080 \
     - To enable in `llama.cpp`, place the MTP files in `~/models` dir
 
 * Flash attention
-    - To enable, pass `-fa` as an option
+    - Computing $QK^T/\sqrt{d}$ results in $N \times N$ matrix. Needs $\approx
+      N^2$ ops
+    - Flash attention reduces it to $\approx N$
+    - To enable in `llama.cpp`, pass `-fa 1` as an option
 
 * Turbo llama.cpp
     - Based on Turbo Quant, Google research (ICLR 2026)
