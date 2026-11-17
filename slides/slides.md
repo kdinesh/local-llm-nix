@@ -362,27 +362,40 @@ Multiuser setting, mechanism very similar to virtual memory
 
 * \# of Float ops (FLOPS): 1 Tera flop/sec (for ordinary CPU)
 
-* Time to move data: 57G / 50G = 1.8 seconds
+* Time to move data: 25G / 50G = 0.5 seconds
 
-* Time for compute: 57G $\times \textcolor{red}{2}$ / 1T = 0.1 seconds
+* Time for compute: 25G $\times \textcolor{red}{2}$ / 1T = 0.05 seconds
 
 * Factor \textcolor{red}{2}: **Recall: 2 ops/mem access**
 
 \begin{center}
- Tokens / second $\le \frac{1}{\max\{\text{Time move data}, \text{Time compute}\}}$ \pause $\le \textbf{0.56}$ \pause
+ Tokens / second $\le \frac{1}{\max\{\text{Time move data}, \text{Time compute}\}}$ \pause $\le \textbf{2}$ 
 \end{center}
 
 
 <!-- 
 \textbf{A similar calc holds for dense models alone.} \pause
--->
 
 \begin{center}
 \fbox{\large The installation should be complete by now. Let's get back ! }
 
 \end{center}
 
+-->
 
+# Machines[^ref] and their tokens/sec (for Qwen 3)
+
+* Comfortable use: 40-50 tks/sec. <!-- ChatGPT (web) gives 50-60 tks/sec  -->
+
+| Machine | Mem bw (GB/s) | FLOPs ($10^{12}$/s)  | tks/sec |
+|---------| :-----:| :-------------:|:-------:|
+Ordinary (DDR4) |	50 |	1	|2
+Mac Mini (LPDDR5X)	| 150 |	4.2 | 	6|
+Mac Ultra (LPDDR5X) | 	1200	| 33| 	48
+RTX 3080 (GDDR6X)| 	760| 	238| 	30.4
+RTX 4090 (GDDR6X)| 	1010	| 660	|40.4
+
+[^ref]: Tech powerup \url{https://www.techpowerup.com/}
 
 # Running `llama.cpp` in single setup
 
@@ -450,7 +463,7 @@ user@potato2 $ ggml-rpc-server -c -p "50050" -t 12
     - $QK^T/\sqrt{d}$ results in $N \times N$ matrix. Needs $\approx
       N^2$ ops
     - Flash attention reduces it to $\approx N$
-    - To enable in `llama.cpp`, pass `-fa 1` as an option
+    - To enable in `llama.cpp`, pass `--flash-attn on` as an option
 
 * Turbo llama.cpp
     - Based on Turbo Quant, Google research (ICLR 2026)
@@ -519,7 +532,7 @@ Quality (of output) vs usability (tokens/sec)
 
 # On quantization
 
-* Usually floating points are 32 bits (IEEE 754 standard)
+* Usually floating points are 32 bits
 
 * Trim the weight values to save memory
 
@@ -528,7 +541,7 @@ Quality (of output) vs usability (tokens/sec)
 
 * Usually quality starts dipping below 8 bits[^quality]
 
-[^quality]: "Reliability Scaling Laws for Quantized Large Language Models", TUM, 2026
+[^quality]: Reliability Scaling Laws for Quantized Large Language Models, TUM, 2026
 
 
 
