@@ -123,15 +123,16 @@ nix run nixpkgs#fastfetch
 
 # Installation of Inference (`llama.cpp`)
 
-- Go to the repo: \url{https://github.com/kdinesh/local-llm-nix/} \pause
-- Download the repo as an archive (show how) \pause
-- Extract the zip to a folder. Do
+1. Go to the repo: \url{https://github.com/kdinesh/local-llm-nix/} \pause
+2. Download the repo to your disk \pause
+ <!-- Download the repo as an archive (show how) \pause -->
+3. Extract the zip to a folder. Do
     - open `linux-intel`  $\gets$ Linux (no GPU),
     - open `linux-amd`  $\gets$ Linux (AMD GPU),
     - open `linux-cuda` $\gets$ Linux (Nvidia GPU, any CPU), 
     - open `mac` $\gets$  Mac (M1,M2,M3,M4,M5) 
-- Right click, "open terminal" in folder (or `cd` to the folder) \pause
-- **Type: `nix develop`. Press enter** 
+4. Right click, "open terminal" in folder (or `cd` to the folder) \pause
+5. **Type: `nix develop`. Press enter** 
 
 <!--
 - Existing software stays unaffected ! You can do Ctrl+C any time you want
@@ -143,12 +144,13 @@ nix run nixpkgs#fastfetch
 
 - Can also do (once install is done)
 
-``` bash
-hf download unsloth/Qwen3-8B-GGUF \ 
-    Qwen3-8B-Q2_K_L.gguf --local-dir ~/models/
-```
 
-- Sit back and relax !! \pause
+``` bash
+        hf download unsloth/Qwen3-8B-GGUF \ 
+            Qwen3-8B-Q2_K_L.gguf \
+            --local-dir ~/models/
+```
+\pause
 
 * Inference: how does `llama.cpp` run an LLM ? \pause
 
@@ -389,7 +391,7 @@ Multiuser setting, mechanism very similar to virtual memory
 * Download the models in `~/models` folder in your home
 
 ``` bash
-$ llama-server --models-dir ~/models --port 8080 
+        llama-server --models-dir ~/models --port 8080 
 
 ```
 
@@ -426,8 +428,9 @@ user@potato2 $ ggml-rpc-server -c -p "50050" -t 12
 * In machine `potato1` run llama.cpp as follows
 
 ``` bash
-$ llama-server --models-dir ~/models --port 8080 \
-    --rpc potato2:50050
+        llama-server --models-dir ~/models \
+            --port 8080 \
+            --rpc potato2:50050
 
 ```
 
@@ -444,7 +447,7 @@ $ llama-server --models-dir ~/models --port 8080 \
     - To enable in `llama.cpp`, place the MTP files in `~/models` dir
 
 * Flash attention
-    - Computing $QK^T/\sqrt{d}$ results in $N \times N$ matrix. Needs $\approx
+    - $QK^T/\sqrt{d}$ results in $N \times N$ matrix. Needs $\approx
       N^2$ ops
     - Flash attention reduces it to $\approx N$
     - To enable in `llama.cpp`, pass `-fa 1` as an option
