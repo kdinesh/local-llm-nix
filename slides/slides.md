@@ -1,7 +1,7 @@
 ---
 title: Installing and using LLMs locally
 subtitle:   (Scan QR code for slides)
-author: In-house AI workshop (Day 1) 
+author: AI in Research Workshop  (Day 1)
 institute: |
            | A01-007, Academic Building, IIT Palakkad  \vspace{3mm}
            | \qrcode*[height=1.15in]{https://kdinesh.tngl.sh/slides.pdf}
