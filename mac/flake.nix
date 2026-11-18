@@ -8,6 +8,7 @@
     system = "aarch64-darwin"; # Adjust to your system if needed
     pkgs = import nixpkgs { inherit system; };
     hf = pkgs.python313Packages.huggingface-hub;
+    pi = pkgs.pi-coding-agent;
     vulkan = pkgs.vulkan-tools;
   in {
     packages.${system}.default = pkgs.llama-cpp-vulkan.overrideAttrs (old: {
@@ -18,6 +19,7 @@
       buildInputs = [ 
         self.packages.${system}.default 
         hf
+        pi
         vulkan ];
       shellHook = ''
           echo "=== Distributed GGML (llama.cpp) Environment ==="
