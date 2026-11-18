@@ -16,6 +16,7 @@ header-includes:
   - \usepackage{blkarray}
   - \usepackage{qrcode}
   - \usepackage{xcolor}
+  - \usepackage{menukeys}
 ---
 
 
@@ -53,8 +54,8 @@ Add some pictures from previous slides.
 # Installation of Nix
 
 - Open terminal
-    - Linux - `Alt+Ctrl+t` 
-    - Mac - `Cmd + space`. Type `terminal`
+    - Linux - \keys{Alt + Ctrl + t} 
+    - Mac - \keys{Cmd + space}. Type `terminal`
 
 
 
@@ -111,7 +112,7 @@ experimental-features = nix-command flakes
     - `hf` - huggingface model downloader
     - `pi` - programming agent (developer: Mario Zechner)
 
-- This step: Needs 6-7 GB of HDD/SSD storage space
+- This step: Needs 6-7 GB of HDD/SSD storage space \pause
 
 <!-- llama.cpp purchased by huggingface, which is purchased by Nvidia -->
 ## Know your hardware !
@@ -173,7 +174,7 @@ Calculate **compute** and **memory** usage for a model under **reasonable assump
 * Each word =  real vector of length $d$
     - For open models $d=8192$ \pause
 
-* Sentence of $N$ words: viewed as $I$ in $\mathbb{R}^{N \times d}$
+* Sentence of $N$ words: viewed as $I \in \mathbb{R}^{N \times d}$
 
 * **Aim: find the $N+1$th word**
 ::::
@@ -199,7 +200,7 @@ $$
 :::
 
 \begin{center}
-\large Words = Tokens
+\large \textcolor{green}{Words = Tokens}
 \end{center}
 
 # Simplified inference algorithm
