@@ -9,6 +9,7 @@
     pkgs = import nixpkgs { inherit system; };
     hf = pkgs.python313Packages.huggingface-hub;
     vulkan = pkgs.vulkan-tools;
+    pi = pkgs.pi-coding-agent;
   in {
     packages.${system}.default = pkgs.llama-cpp-vulkan.overrideAttrs (old: {
       cmakeFlags = (old.cmakeFlags or []) ++ [ "-DGGML_RPC=ON -DGGML_BLAS=ON -DGGML_BLAS_VENDOR=OpenBLAS" ];
@@ -18,13 +19,13 @@
       buildInputs = [ 
         self.packages.${system}.default 
         hf
+        pi
         vulkan ];
       shellHook = ''
           echo "=== Distributed GGML (llama.cpp) Environment ==="
           echo "Available binaries: llama-cli, llama-server, ggml-rpc-server"
           echo "Available hugging face: hf"
           echo "================================================"
-	  ./node-subhadip.sh
         '';
 
     };
