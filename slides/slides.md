@@ -270,7 +270,7 @@ $$
 \end{center}
 * Each layer $t$, $W_Q^{(t)}$, $W_K^{(t)}$, $W_V^{(t)}$ - all $d \times d$ matrices
 
-* Let $Q = I \cdot W_Q$, $K = I\cdot W_K$, $V = I \cdot W_V$ \pause
+* Let $Q = I \cdot W_Q^{(t)}$, $K = I\cdot W_K^{(t)}$, $V = I \cdot W_V^{(t)}$ \pause
 
 * $\mathbf{Attention}_t(I) = \left (\mathsf{softmax} \left( \frac{Q\cdot K^T}{\sqrt{d}} \right ) \right )V$ \pause
 
