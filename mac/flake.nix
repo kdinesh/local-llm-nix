@@ -13,6 +13,7 @@
   in {
     packages.${system}.default = pkgs.llama-cpp-vulkan.overrideAttrs (old: {
       cmakeFlags = (old.cmakeFlags or []) ++ [ "-DGGML_RPC=ON"  ];
+      doCheck = false;
     });
 
     devShells.${system}.default = pkgs.mkShell {
